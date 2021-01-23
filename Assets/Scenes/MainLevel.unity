@@ -7066,7 +7066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064191549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 5, z: 0}
+  m_LocalPosition: {x: -5, y: 2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 585884901}
@@ -7104,7 +7104,7 @@ MonoBehaviour:
   groundCheckTransform: {fileID: 585884901}
   playerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4151
   playerIsDead: 0
 --- !u!1001 &1087601238
 PrefabInstance:
@@ -13397,6 +13397,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boulder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480755190702443909, guid: e2613591813f7f9458e79413b3b12785,
+        type: 3}
+      propertyPath: groundCheckTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480755190702443909, guid: e2613591813f7f9458e79413b3b12785,
+        type: 3}
+      propertyPath: boulderMask.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5113944699166199239, guid: e2613591813f7f9458e79413b3b12785,
         type: 3}

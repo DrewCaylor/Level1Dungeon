@@ -10,6 +10,7 @@ TagManager:
   - Slime
   - Boulder
   - bat
+  - Spikes
   layers:
   - Default
   - TransparentFX

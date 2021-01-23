@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Environment : MonoBehaviour
 {
-    public Transform playerTransform;
+    //public Transform playerTransform;
     private Rigidbody rigidbodyComponent;
-    private float rollSpeed = 1;
+    private float rollSpeed = 2;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        /*if(tag == "boulder")
+        if(this.tag == "Boulder")
         {
-            gameObject.SetActive(false);
-        }*/
+            rigidbodyComponent = GetComponent<Rigidbody>();
+            rigidbodyComponent.velocity = new Vector2(0, -.1f); 
+        }
     }
 
     // Update is called once per frame
@@ -23,15 +24,23 @@ public class Environment : MonoBehaviour
     {
         
     }
-    /*private void OnTriggerEnter(Collider other)
+    
+    private void FixedUpdate() 
+    {   
+        if(rigidbodyComponent.velocity.y == 0)
+        {
+            rigidbodyComponent.velocity = new Vector2(-rollSpeed, rigidbodyComponent.velocity.y); //roll left at rollspeed
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 9)
+        if(this.tag == "Boulder" && other.tag == "Spikes")
         {    
-           
-            //stop moving
+            Destroy(gameObject);
             
         }
-    }*/
+    }
 }
 
 
